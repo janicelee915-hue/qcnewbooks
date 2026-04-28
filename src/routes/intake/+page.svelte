@@ -1,26 +1,104 @@
-<div class="max-w-2xl mx-auto mt-10 p-8 bg-gray-950 border border-gray-700 rounded-lg">
+<form class="max-w-2xl mx-auto mt-10 p-8 bg-gray-950 border border-gray-700 rounded-lg">
   <h1 class="text-2xl font-bold text-cyan-400 mb-6">New Client Intake</h1>
-    <label class="block text-gray-300 text-sm mb-1">First Name</label>
-      <input type="text" placeholder="Maria"
-    class="w-full p-3 mb-4 bg-gray-800 border border-gray-600 rounded text-white placeholder-gray-500" />
-      <label class="block text-gray-300 text-sm mb-1">Last Name</label>
-       <input type="text" placeholder="Santos"
-    class="w-full p-3 mb-4 bg-gray-800 border border-gray-600 rounded text-white placeholder-gray-500" />
-      <label class="block text-gray-300 text-sm mb-1">Email Address</label>
-         <input type="email" placeholder="[email protected]"
-    class="w-full p-3 mb-4 bg-gray-800 border border-gray-600 rounded text-white placeholder-gray-500" />
-      <label class="block text-gray-300 text-sm mb-1">Engagement Start Date</label>
-        <input type="date"
-    class="w-full p-3 mb-4 bg-gray-800 border border-gray-600 rounded text-white" />
-      <label class="block text-gray-300 text-sm mb-1">Estimated Annual Revenue ($)</label>
-        <input type="number" step="1000" min="0" placeholder="0"
-    class="w-full p-3 mb-4 bg-gray-800 border border-gray-600 rounded text-green-400" />
-      <label class="block text-gray-300 text-sm mb-1">Service Type</label>
-        <select class="w-full p-3 mb-4 bg-gray-800 border border-gray-600 rounded text-white">
-            <option value="" disabled selected>Select a service...</option>
-            <option value="bookkeeping">Bookkeeping</option>
-            <option value="tax_prep">Tax Preparation</option>
-            <option value="advisory">Advisory Services</option>
 
+  <label class="block text-gray-300 text-sm mb-1">First Name</label>
+  <input
+    type="text"
+    placeholder="Maria"
+    class="w-full p-3 mb-4 bg-gray-800 border border-gray-600 rounded text-white placeholder-gray-500"
+  />
+
+  <label class="block text-gray-300 text-sm mb-1">Last Name</label>
+  <input
+    type="text"
+    placeholder="Santos"
+    class="w-full p-3 mb-4 bg-gray-800 border border-gray-600 rounded text-white placeholder-gray-500"
+  />
+
+  <label class="block text-gray-300 text-sm mb-1">Email Address</label>
+  <input
+    type="email"
+    placeholder="email@example.com"
+    class="w-full p-3 mb-4 bg-gray-800 border border-gray-600 rounded text-white placeholder-gray-500"
+  />
+
+  <label class="block text-gray-300 text-sm mb-1">Engagement Start Date</label>
+  <input
+    type="date"
+    class="w-full p-3 mb-4 bg-gray-800 border border-gray-600 rounded text-white"
+  />
+
+  <label class="block text-gray-300 text-sm mb-1">Estimated Annual Revenue ($)</label>
+  <input
+    type="number"
+    step="1000"
+    min="0"
+    placeholder="0"
+    class="w-full p-3 mb-4 bg-gray-800 border border-gray-600 rounded text-green-400"
+  />
+
+  <label class="block text-gray-300 text-sm mb-1">Service Type</label>
+  <select class="w-full p-3 mb-4 bg-gray-800 border border-gray-600 rounded text-white">
+    <option value="" disabled selected>Select a service...</option>
+    <option value="bookkeeping">Bookkeeping</option>
+    <option value="tax_prep">Tax Preparation</option>
+    <option value="advisory">Advisory Services</option>
   </select>
-</div>
+
+  <label class="block text-gray-300 text-sm mb-2">Filing Status</label>
+  <div class="flex flex-col gap-2 mb-4">
+    <label class="flex items-center gap-2 text-gray-300 cursor-pointer">
+      <input type="radio" name="filing_status" value="single" class="accent-cyan-400" />
+      Single
+    </label>
+
+    <label class="flex items-center gap-2 text-gray-300 cursor-pointer">
+      <input type="radio" name="filing_status" value="mfj" class="accent-cyan-400" />
+      Married Filing Jointly
+    </label>
+
+    <label class="flex items-center gap-2 text-gray-300 cursor-pointer">
+      <input type="radio" name="filing_status" value="business" class="accent-cyan-400" />
+      Business
+    </label>
+  </div>
+
+  <label class="block text-gray-300 text-sm mb-2">Services Requested</label>
+  <div class="flex flex-col gap-2 mb-4">
+    <label class="flex items-center gap-2 text-gray-300 cursor-pointer">
+      <input type="checkbox" class="accent-cyan-400" />
+      Monthly Bookkeeping
+    </label>
+
+    <label class="flex items-center gap-2 text-gray-300 cursor-pointer">
+      <input type="checkbox" class="accent-cyan-400" />
+      Annual Tax Preparation
+    </label>
+
+    <label class="flex items-center gap-2 text-gray-300 cursor-pointer">
+      <input type="checkbox" class="accent-cyan-400" />
+      Payroll Processing
+    </label>
+  </div>
+
+  <label class="block text-gray-300 text-sm mb-1">Intake Notes</label>
+  <textarea
+    rows="4"
+    placeholder="Any additional context about this client..."
+    class="w-full p-3 mb-6 bg-gray-800 border border-gray-600 rounded text-white placeholder-gray-500 resize-none"
+  ></textarea>
+
+  <button
+    type="submit"
+    class="w-full p-3 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded transition"
+  >
+    Save Client
+  </button>
+
+  <button
+    type="button"
+    class="w-full p-3 mt-2 bg-transparent border border-gray-600 hover:border-gray-400 text-gray-400 hover:text-gray-200 rounded transition"
+  >
+    Cancel
+  </button>
+</form>
